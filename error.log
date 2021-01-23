@@ -1,1 +1,70 @@
 
+2021-01-22 22:09:30,890 INFO: errors [in c:\Users\15370\OneDrive\Desktop\udacity\course-Full Stack\Part1-SQL and Data modeling for the web\01_fyyur\starter_code\app.py:528]
+2021-01-22 22:09:42,007 ERROR: Exception on /venues [GET] [in C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1777]
+Traceback (most recent call last):
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry[key]
+KeyError: 19544
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 36, in reraise
+    raise value
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\15370\OneDrive\Desktop\udacity\course-Full Stack\Part1-SQL and Data modeling for the web\01_fyyur\starter_code\app.py", line 63, in venues
+    location = Venue.query.with_entities(Venue.city, Venue.state).distinct().all()
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_sqlalchemy\__init__.py", line 519, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\scoping.py", line 78, in __call__
+    return self.registry()
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\_collections.py", line 1012, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 3225, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_sqlalchemy\__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
+2021-01-22 22:09:45,419 ERROR: Exception on /artists [GET] [in C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1777]
+Traceback (most recent call last):
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry[key]
+KeyError: 13188
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 36, in reraise
+    raise value
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\15370\OneDrive\Desktop\udacity\course-Full Stack\Part1-SQL and Data modeling for the web\01_fyyur\starter_code\app.py", line 222, in artists
+    artists = Artist.query.all()
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_sqlalchemy\__init__.py", line 519, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\scoping.py", line 78, in __call__
+    return self.registry()
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\_collections.py", line 1012, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 3225, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\15370\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_sqlalchemy\__init__.py", line 137, in __init__
+    track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
+KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'
